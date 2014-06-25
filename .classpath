@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="jsqlite/JDBC1/|jsqlite/JDBC2/|jsqlite/JDBC2x/|jsqlite/JDBC2z/" kind="src" path="src"/>
-	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ukacedinabotanitours-CordovaLib"/>
+	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
