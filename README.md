@@ -57,3 +57,46 @@ Testing
  `adb push test.db /mnt/sdcard/spatialite_test.db`
 
 - Run the SpatialiteTestActivity on your phone.
+
+
+Cordova Plugin
+========
+
+- Unpack (spatialite-for-android)[http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip] and copy libraries to cordova project, e.g:
+
+```
+$ cp /path/to/spatialite-for-android/spatialite-for-android/spatialite-android/spatialite-android-library/libs/* /path/to/cordovaproject/platforms/android/libs/
+```
+
+- Install plugin
+
+```
+$ cd /path/to/cordovaproject/
+$ cordova plugin add https://github.com/edina/android-spatialite.git
+```
+
+- Example usage
+
+```
+window.SpatiaLitePlugin.openDatabase(
+    'mydb',
+    function(db){
+        db.executeSql(
+        'SELECT id, ST_AsText(geometry) FROM some_table WHERE ST_Within(geometry, BuildMbr(-2.4178, 55.8741, -2.2384, 55.8049))',
+                [],
+                function (results) {
+                    for(var i in results){
+                        console.log(results[i][0] + " : " + results[i][1]);
+                    }
+                },
+                function(error){
+                    console.log(error);
+                }
+            );
+        },
+        function(){
+            console.log("Something went wrong with database.");
+        }
+    );
+
+```
