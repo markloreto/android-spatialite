@@ -62,7 +62,7 @@ Testing
 Cordova Plugin
 ========
 
-- Unpack [spatialite-for-android]([http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip) and copy libraries to cordova project, e.g:
+- Unpack [spatialite-for-android](http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip) and copy libraries to [cordova](http://cordova.apache.org/) project, e.g:
 
 ```
 $ cp /path/to/spatialite-for-android/spatialite-for-android/spatialite-android/spatialite-android-library/libs/* /path/to/cordovaproject/platforms/android/libs/
