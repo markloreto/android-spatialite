@@ -67,24 +67,27 @@ Cordova Plugin
 ```
 $ cp /path/to/mydb.sqlite /path/to/cordovaproject/platforms/android/assets/
 ```
+
 And in your CordovaActivity onCreate have something like:
+
 ```
 File dbFile = getDatabasePath("mydb.db");
 if(!dbFile.exists()){
-String parentPath = dbFile.getParent();
-File filedir = new File(parentPath);
-if (!filedir.exists()) {
-    if (!filedir.mkdirs()) {
-        return;
+    String parentPath = dbFile.getParent();
+    File filedir = new File(parentPath);
+    if (!filedir.exists()) {
+        if (!filedir.mkdirs()) {
+            return;
+        }
     }
+
+    InputStream in = this.getApplicationContext().getAssets().open("mydb.sqlite");
+    OutputStream out = new FileOutputStream(dbFile);
+
+    byte[] buf = new byte[1024];
+    int len; while ((len = in.read(buf)) > 0) out.write(buf, 0, len);
+    in.close(); out.close();
 }
-
-InputStream in = this.getApplicationContext().getAssets().open("mydb.sqlite");
-OutputStream out = new FileOutputStream(dbFile);
-
-byte[] buf = new byte[1024];
-int len; while ((len = in.read(buf)) > 0) out.write(buf, 0, len);
-in.close(); out.close();
 ```
 
 - Unpack [spatialite-for-android](http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip) and copy libraries to [cordova](http://cordova.apache.org/) project, e.g:
