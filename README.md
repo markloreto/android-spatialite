@@ -62,7 +62,11 @@ Testing
 Cordova Plugin
 ========
 
-- If you wish to use an existing spatialite database it needs to be [shipped with your app] (http://www.raymondcamden.com/index.cfm/2012/7/27/Guest-Blog-Post-Shipping-a-populated-SQLite-DB-with-PhoneGap) and copied to the database path the first time the app starts. e.g:
+The following outlines getting spatialite working as a Cordova plugin.
+
+#### Deploy Spatialite Database with App
+
+If you wish to use an existing spatialite database it needs to be [shipped with your app] (http://www.raymondcamden.com/index.cfm/2012/7/27/Guest-Blog-Post-Shipping-a-populated-SQLite-DB-with-PhoneGap) and copied to the database path the first time the app starts. e.g:
 
 ```
 $ cp /path/to/mydb.sqlite /path/to/cordovaproject/platforms/android/assets/
@@ -90,20 +94,22 @@ if(!dbFile.exists()){
 }
 ```
 
-- Unpack [spatialite-for-android](http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip) and copy libraries to [cordova](http://cordova.apache.org/) project, e.g:
+#### Install Spatialite Libraries
+
+Unpack [spatialite-for-android](http://www.gaia-gis.it/gaia-sins/spatialite-android/spatialite-for-android-3.0.1.zip) and copy libraries to [cordova](http://cordova.apache.org/) project, e.g:
 
 ```
 $ cp /path/to/spatialite-for-android/spatialite-for-android/spatialite-android/spatialite-android-library/libs/* /path/to/cordovaproject/platforms/android/libs/
 ```
 
-- Install plugin
+#### Install Plugin
 
 ```
 $ cd /path/to/cordovaproject/
 $ cordova plugin add https://github.com/edina/android-spatialite.git
 ```
 
-- Example usage
+#### Example Usage
 
 ```
 window.SpatiaLitePlugin.openDatabase(
