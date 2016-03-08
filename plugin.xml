@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="uk.ac.edina.spatialite"
+        id="com.atd-schubert.spatialite"
         version="0.0.1">
 
   <name>SpatialLite</name>
   <description>Cordova SpatialLite Plugin</description>
-  <license>Apache 2.0</license>
-  <keywords>cordova,spatialite</keywords>
+  <license>ISC</license>
+  <keywords>cordova, spatialite</keywords>
 
   <js-module src="www/SpatiaLite.js" name="SpatiaLitePlugin">
     <clobbers target="SpatiaLitePlugin" />
@@ -15,12 +15,16 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="SpatiaLitePlugin">
-        <param name="android-package" value="uk.ac.edina.spatialite.SpatiaLitePlugin"/>
+        <param name="android-package" value="com.atd-schubert.spatialite.SpatiaLitePlugin"/>
       </feature>
     </config-file>
 
     <source-file src="src/uk/ac/edina/spatialite/SpatiaLitePlugin.java"
                  target-dir="src/uk/ac/edina/spatialite/" />
+
+    <source-file src="src/bin/armeabi/libjsqlite.so" target-dir="libs/armeabi/" />
+    <source-file src="src/bin/armeabi-v7a/libjsqlite.so" target-dir="libs/armeabi-v7a/" />
+    <source-file src="src/bin/x86/libjsqlite.so" target-dir="libs/x86/" />
 
     <source-file src="src/jsqlite/Authorizer.java" target-dir="src/jsqlite/" />
     <source-file src="src/jsqlite/Backup.java" target-dir="src/jsqlite/" />
