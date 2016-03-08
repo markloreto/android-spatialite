@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.atd-schubert.spatialite"
+        id="org.yagajs.spatialite"
         version="0.0.1">
 
   <name>SpatialLite</name>
@@ -15,12 +15,12 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="SpatiaLitePlugin">
-        <param name="android-package" value="com.atd-schubert.spatialite.SpatiaLitePlugin"/>
+        <param name="android-package" value="org.yagajs.spatialite.SpatiaLitePlugin"/>
       </feature>
     </config-file>
 
-    <source-file src="src/uk/ac/edina/spatialite/SpatiaLitePlugin.java"
-                 target-dir="src/uk/ac/edina/spatialite/" />
+    <source-file src="src/org/yagajs/spatialite/SpatiaLitePlugin.java"
+                 target-dir="src/org/yagajs/spatialite/" />
 
     <source-file src="src/bin/armeabi/libjsqlite.so" target-dir="libs/armeabi/" />
     <source-file src="src/bin/armeabi-v7a/libjsqlite.so" target-dir="libs/armeabi-v7a/" />

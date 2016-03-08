@@ -1,4 +1,4 @@
-package uk.ac.edina.spatialite;
+package org.yagajs.spatialite;
 
 import java.io.File;
 import java.util.HashMap;
