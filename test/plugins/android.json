@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.yaga.spatialite.test"
+        },
+        "org.yagajs.spatialite": {
+            "PACKAGE_NAME": "org.yagajs.spatialite.test"
+        }
+    },
+    "dependent_plugins": {}
+}

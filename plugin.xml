@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="org.yagajs.spatialite"
+        version="0.0.1">
+
+  <name>Spatialite</name>
+  <description>Cordova Spatialite Plugin</description>
+  <license>ISC</license>
+  <keywords>cordova, spatialite</keywords>
+
+  <js-module src="www/websql-api.js" name="SpatialitePlugin">
+    <clobbers target="SpatialitePlugin" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SpatialitePlugin">
+        <param name="android-package" value="org.yagajs.spatialite.SpatialitePlugin"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/org/yagajs/spatialite/SpatialitePlugin.java"
+                 target-dir="src/org/yagajs/spatialite/" />
+
+    <source-file src="src/bin/armeabi/libjsqlite.so" target-dir="libs/armeabi/" />
+    <source-file src="src/bin/armeabi-v7a/libjsqlite.so" target-dir="libs/armeabi-v7a/" />
+    <source-file src="src/bin/x86/libjsqlite.so" target-dir="libs/x86/" />
+
+    <source-file src="src/jsqlite/Authorizer.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Backup.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Blob.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/BusyHandler.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Callback.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Constants.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Database.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Exception.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Function.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/FunctionContext.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Profile.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/ProgressHandler.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Stmt.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/TableResult.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Trace.java" target-dir="src/jsqlite/" />
+    <source-file src="src/jsqlite/Vm.java" target-dir="src/jsqlite/" />
+
+  </platform>
+</plugin>

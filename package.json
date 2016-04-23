@@ -1,0 +1,23 @@
+{
+  "name": "@yaga/cordova-plugin-spatialite",
+  "version": "0.0.1",
+  "description": "A Spatialite plugin for cordova",
+  "main": "www/websql-api.js",
+  "scripts": {
+    "test": "test/run.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atd-schubert/android-spatialite.git"
+  },
+  "keywords": [
+    "spatialite",
+    "typescript"
+  ],
+  "author": "Arne Schubert <atd.schubert@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atd-schubert/android-spatialite/issues"
+  },
+  "homepage": "https://github.com/atd-schubert/android-spatialite#readme"
+}

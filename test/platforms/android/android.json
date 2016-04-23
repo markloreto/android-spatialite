@@ -1,0 +1,50 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpatiaLitePlugin\"><param name=\"android-package\" value=\"org.yagajs.spatialite.SpatiaLitePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpatialitePlugin\"><param name=\"android-package\" value=\"org.yagajs.spatialite.SpatialitePlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.yaga.spatialite.test"
+        },
+        "org.yagajs.spatialite": {
+            "PACKAGE_NAME": "org.yagajs.spatialite.test"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/org.yagajs.spatialite/www/websql-api.js",
+            "id": "org.yagajs.spatialite.SpatialitePlugin",
+            "clobbers": [
+                "SpatialitePlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "org.yagajs.spatialite": "0.0.1"
+    }
+}

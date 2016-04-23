@@ -1,0 +1,7 @@
+# TypeScript
+typings/
+
+.idea/
+
+# From refactorings
+old
