@@ -99,8 +99,8 @@ public class SpatialitePlugin extends CordovaPlugin {
 		final Database db = this.getDatabase(name);
 
 
-		cordova.getThreadPool().execute(new Runnable() {
-        	public void run() {
+		// this is a litte bit buggy and slower cordova.getThreadPool().execute(new Runnable() {
+        // this is a litte bit buggy and slower 	public void run() {
 				JSONObject response = new JSONObject();
 				try {
 		            Stmt stmt = db.prepare(sql);
@@ -129,8 +129,8 @@ public class SpatialitePlugin extends CordovaPlugin {
 					e.printStackTrace();
 					callbackContext.error(e.getMessage());
 		        }
-			}
-		});
+		// this is a litte bit buggy and slower 	}
+		// this is a litte bit buggy and slower });
 	}
 
 	/**
