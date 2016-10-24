@@ -1,8 +1,10 @@
 {
-  "ambientDependencies": {
-    "cordova": "registry:dt/cordova#0.0.0+20160316155526"
+  "dependencies": {},
+  "globalDependencies": {
+    "cordova": "registry:dt/cordova#0.0.0+20160607055823",
+    "es6-promise": "registry:dt/es6-promise#0.0.0+20160614011821"
   },
-  "ambientDevDependencies": {
-    "mocha": "registry:dt/mocha#2.2.5+20160317120654"
+  "globalDevDependencies": {
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353"
   }
 }

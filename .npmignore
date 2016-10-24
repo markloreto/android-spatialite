@@ -1,7 +1,10 @@
 # TypeScript
 typings/
+node_modules/
 
 .idea/
 
 # From refactorings
 old
+
+doc/

@@ -9,3 +9,8 @@ www/
 
 # From refactorings
 old
+
+# Mac meta files
+.DS_Store
+
+doc/
