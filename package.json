@@ -1,14 +1,19 @@
 {
   "name": "@yaga/cordova-plugin-spatialite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Spatialite plugin for cordova",
   "main": "www/websql-api.js",
   "scripts": {
-    "test": "test/run.sh"
+    "test": "test/run.sh",
+    "transpile": "node_modules/.bin/tsc",
+    "lint": "node_modules/.bin/tslint ts/*.ts && node_modules/.bin/ts-npm-lint",
+    "dist": "npm run transpile && ts-npm-lint --fix-typings && npm run lint && npm run doc && echo \"Build without errors...\"",
+    "init": "npm install && node_modules/.bin/typings install",
+    "doc": "node_modules/.bin/jsdoc www/*.js README.md -d doc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atd-schubert/android-spatialite.git"
+    "url": "git@gitlab.atd-schubert.com:yaga/cordova-plugin-spatialite.git"
   },
   "keywords": [
     "spatialite",
@@ -17,7 +22,15 @@
   "author": "Arne Schubert <atd.schubert@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/atd-schubert/android-spatialite/issues"
+    "url": "http://yagajs.org"
   },
-  "homepage": "https://github.com/atd-schubert/android-spatialite#readme"
+  "homepage": "http://yagajs.org",
+  "devDependencies": {
+    "jsdoc": "^3.4.2",
+    "ts-npm-lint": "^0.1.0",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
+  },
+  "typings": "typings/index.d.ts"
 }
