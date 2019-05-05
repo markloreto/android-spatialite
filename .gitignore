@@ -2,8 +2,6 @@
 typings/
 node_modules/
 
-# transpiled docs
-www/
 
 .idea/
 
