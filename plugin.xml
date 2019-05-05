@@ -8,7 +8,7 @@
   <license>ISC</license>
   <keywords>cordova, spatialite</keywords>
 
-  <js-module src="www/websql-api.js" name="SpatialitePlugin">
+  <js-module src="www/SpatiaLite.js" name="SpatialitePlugin">
     <clobbers target="SpatialitePlugin" />
   </js-module>
 
